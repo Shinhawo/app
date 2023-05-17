@@ -53,7 +53,7 @@ public class deptDetailListServlet extends HttpServlet{
 		} else {
 			for(Employee employee : empList) {
 				out.println("			<tr>");
-				out.println("				<td>"+employee.getId()+"</td>");
+				out.println("				<td><a href='../emp/detail?eid="+employee.getId()+"'>"+employee.getId()+"</a></td>");
 				out.println("				<td>"+employee.getFirstName()+" "+employee.getLastName()+"</td>");
 				out.println("				<td>"+employee.getJobId()+"</td>");
 				out.println("				<td>"+employee.getPhoneNumber()+"</td>");

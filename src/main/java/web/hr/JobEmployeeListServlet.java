@@ -58,7 +58,7 @@ public class JobEmployeeListServlet extends HttpServlet{
 		} else {
 			for(Employee emp : empList) {
 				out.println("	<tr>");
-				out.println("	<td>"+emp.getId()+"</td>");
+				out.println("	<td><a href='../emp/detail?eid="+emp.getId()+"'>"+emp.getId()+"</a></td>");
 				out.println("	<td>"+emp.getFirstName()+" "+emp.getLastName()+"</td>");
 				out.println("	<td>"+emp.getHireDate()+"</td>");
 				out.println("	<td>"+emp.getJobId()+"</td>");
