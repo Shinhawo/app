@@ -1,4 +1,4 @@
-package web;
+package web.hr;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -47,7 +47,7 @@ public class JobListServlet extends HttpServlet {
 		out.println("		<tbody>");
 		for (Job job : jobList) {
 			out.println("			<tr>");
-			out.println("				<td>"+job.getId()+"</td>");
+			out.println("				<td><a href='emps?jid="+job.getId()+"'>"+job.getId()+"</a></td>");
 			out.println("				<td>"+job.getTitle()+"</td>");
 			out.println("				<td>"+job.getMinSalary()+"</td>");
 			out.println("				<td>"+job.getMaxSalary()+"</td>");
