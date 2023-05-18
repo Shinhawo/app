@@ -15,6 +15,7 @@ public class Employee {
 	private double commissionPct;
 	private int managerId;
 	private int deptId;
+	private String name;
 	
 	public Employee() {
 
@@ -108,6 +109,12 @@ public class Employee {
 		this.deptId = deptId;
 	}
 	
+	public String getName() {
+		return name;
+	}
 	
+	public void setName(String name) {
+		this.name = name;
+	}
 	
 }

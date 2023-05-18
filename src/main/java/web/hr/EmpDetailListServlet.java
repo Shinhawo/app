@@ -21,8 +21,10 @@ public class EmpDetailListServlet extends HttpServlet{
 		String empId = req.getParameter("eid");
 		System.out.println("조회요청한 EMPLOYEE_ID : "+empId);
 		
+		
 		EmployeeDao employeeDao = new EmployeeDao();
 		Employee emp = employeeDao.getEmployee(empId);
+		
 		
 		PrintWriter out = resp.getWriter();
 		out.println("<!doctype html>");

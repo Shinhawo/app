@@ -36,6 +36,7 @@ public class deptlistServlet extends HttpServlet{
 		out.println("		<thead>");
 		out.println("			<tr>");
 		out.println("				<th>부서아이디</th>");
+		out.println("				<th>부서아이디2</th>");
 		out.println("				<th>부서이름</th>");
 		out.println("			</tr>");
 		out.println("		</thead>");
@@ -45,6 +46,7 @@ public class deptlistServlet extends HttpServlet{
 		for (Department department : deptList) {
 			out.println("		<tr>");
 			out.println("			<td><a href='detail?did="+department.getId()+"'>"+department.getId()+"</a></td>");
+			out.println("     <td><a href='/app/dept/detail?did="+department.getId()+"'>"+department.getId()+"</a></td>");
 			out.println("			<td>"+department.getName()+"</td>");
 			out.println("		</tr>");
 		}

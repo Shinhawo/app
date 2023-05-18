@@ -22,6 +22,7 @@ public class EmployeeListServlet extends HttpServlet{
 		EmployeeDao employeeDao = new EmployeeDao();
 		List<Employee> empList = employeeDao.getAllEmployees();
 		
+		
 		PrintWriter out = resp.getWriter();
 		out.println("<!doctype html>");
 		out.println("<html>");
@@ -47,7 +48,7 @@ public class EmployeeListServlet extends HttpServlet{
 		for (Employee emp : empList) {
 			out.println("		<tr>");
 			out.println("			<td><a href='detail?eid="+emp.getId()+"'>"+emp.getId()+"</a></td>");
-			out.println("			<td>"+emp.getFirstName()+" "+emp.getLastName()+"</td>");
+			out.println("			<td><a href='detail?eid="+emp.getId()+"'>"+emp.getFirstName()+" "+emp.getLastName()+"</a></td>");
 			out.println("			<td>"+emp.getJobId()+"</td>");
 			out.println("			<td>"+emp.getHireDate()+"</td>");
 			out.println("			<td>"+emp.getPhoneNumber()+"</td>");
