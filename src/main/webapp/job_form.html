@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>직종 등록 폼</title>
+</head>
+<body>
+	<h1>직종 등록 폼</h1>
+
+<!-- 
+	method = 요청방식
+		GET POST가 있다 (회원가입, 직종정보등록, 상품등록 입력폼 -> 
+												  정보가 데이터베이스에 저장됐으면 좋겠다 
+												  조회 X 값이 여러개= post)
+												  
+	action : form이 제출하는 폼 입력값을 받아서 처리할 서블릿의 경로를 지정한다.
+		
+ -->
+	<form method="post" action="job/add">
+		<div>
+			<label>직종아이디</label><br />
+			<input type="text" name="id">
+		</div>
+		<div>
+			<label>직종제목</label><br />
+			<input type="text" name="title">
+		</div>
+		<div>
+			<label>최소급여</label><br />
+			<input type="text" name="min">
+		</div>
+		<div>
+			<label>최대급여</label><br />
+			<input type="text" name="max">
+		</div>
+		<button type="submit">등록</button>
+	</form>
+	
+	
+</body>
+</html>
